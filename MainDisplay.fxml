@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sothawo.mapjfx.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="534.0" prefWidth="726.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <VBox fx:id="vbox" prefHeight="534.0" prefWidth="726.0">
+         <children>
+            <TextField fx:id="searchBar" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#getId" prefHeight="26.0" prefWidth="307.0" promptText="Search" />
+            <MapView fx:id="mapView" prefHeight="507.0" prefWidth="726.0" />
+            <HBox fx:id="bottomBox" prefHeight="88.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="importButton" mnemonicParsing="false" onAction="#importHelper" prefHeight="118.0" prefWidth="122.0" text="Import">
+                     <font>
+                        <Font name="Yu Gothic Medium" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="exportButton" mnemonicParsing="false" onAction="#exportHelper" prefHeight="126.0" prefWidth="122.0" text="Export">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="300.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="36.0" prefWidth="300.0">
+         <children>
+            <Button fx:id="stopIdButton" maxHeight="-Infinity" mnemonicParsing="false" onAction="#generateStopIdInterface" prefHeight="26.0" prefWidth="115.0" text="stopId">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="routeIdButton" maxHeight="-Infinity" mnemonicParsing="false" onAction="#plotStopsOnRoute" prefHeight="26.0" prefWidth="115.0" text="plot route">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               </Button>
+            <Button fx:id="tripIdButton" mnemonicParsing="false" onAction="#generateTripIdInterface" prefHeight="26.0" prefWidth="115.0" text="tripId">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </HBox>
+   </children>
+</Pane>
